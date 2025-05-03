@@ -1,0 +1,47 @@
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&family=Amiri+Quran&display=swap');
+
+    @layer base {
+      * {
+        @apply border-border;
+      }
+      body {
+        @apply bg-background text-foreground;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        direction: rtl;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        overflow-x: hidden;
+      }
+
+      .card-glass {
+        background-color: hsl(var(--card) / 0.6);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        @apply border border-[hsl(var(--border)/0.2)] shadow-lg rounded-lg;
+      }
+
+      .dark .card-glass {
+        background-color: hsl(var(--card) / 0.7);
+        @apply border border-[hsl(var(--border)/0.1)] shadow-xl;
+      }
+
+      ::-webkit-scrollbar {
+          width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+          background: hsl(var(--secondary) / 0.5);
+          border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+          background: hsl(var(--primary) / 0.7);
+          border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+          background: hsl(var(--primary));
+      }
+    }
+  
