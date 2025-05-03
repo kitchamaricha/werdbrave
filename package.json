@@ -2,11 +2,14 @@
   "name": "quran-daily-reader",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://kitchamaricha.github.io/werdbrave",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "depoly": "gh-pages -d build"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",
